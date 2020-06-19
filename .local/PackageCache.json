@@ -10,10 +10,10 @@
         "C:\\Users\\victor.rodriguez\\.nuget\\packages\\csvhelper/2.13.5\\lib/net40-client/CsvHelper.dll",
         "C:\\Users\\victor.rodriguez\\.nuget\\packages\\documentformat.openxml/2.5.0\\lib/DocumentFormat.OpenXml.dll",
         "C:\\Users\\victor.rodriguez\\.nuget\\packages\\microsoft.visualstudio.ole.interop/7.10.6071\\lib/Microsoft.VisualStudio.OLE.Interop.dll",
-        "C:\\Users\\victor.rodriguez\\.nuget\\packages\\npoi/2.4.1\\lib/net45/NPOI.dll",
         "C:\\Users\\victor.rodriguez\\.nuget\\packages\\npoi/2.4.1\\lib/net45/NPOI.OOXML.dll",
         "C:\\Users\\victor.rodriguez\\.nuget\\packages\\npoi/2.4.1\\lib/net45/NPOI.OpenXml4Net.dll",
         "C:\\Users\\victor.rodriguez\\.nuget\\packages\\npoi/2.4.1\\lib/net45/NPOI.OpenXmlFormats.dll",
+        "C:\\Users\\victor.rodriguez\\.nuget\\packages\\npoi/2.4.1\\lib/net45/NPOI.dll",
         "C:\\Users\\victor.rodriguez\\.nuget\\packages\\sharpziplib/1.0.0\\lib/net45/ICSharpCode.SharpZipLib.dll",
         "C:\\Users\\victor.rodriguez\\.nuget\\packages\\uipath.excel.activities/2.8.5\\lib/net461/UiPath.Excel.Activities.Design.dll",
         "C:\\Users\\victor.rodriguez\\.nuget\\packages\\uipath.excel.activities/2.8.5\\lib/net461/UiPath.Excel.Activities.dll",
@@ -72,10 +72,10 @@
       },
       "Assemblies": [
         "C:\\Users\\victor.rodriguez\\.nuget\\packages\\avalonedit/5.0.3\\lib/Net40/ICSharpCode.AvalonEdit.dll",
-        "C:\\Users\\victor.rodriguez\\.nuget\\packages\\extended.wpf.toolkit/2.8.0\\lib/net40/Xceed.Wpf.AvalonDock.dll",
         "C:\\Users\\victor.rodriguez\\.nuget\\packages\\extended.wpf.toolkit/2.8.0\\lib/net40/Xceed.Wpf.AvalonDock.Themes.Aero.dll",
         "C:\\Users\\victor.rodriguez\\.nuget\\packages\\extended.wpf.toolkit/2.8.0\\lib/net40/Xceed.Wpf.AvalonDock.Themes.Metro.dll",
         "C:\\Users\\victor.rodriguez\\.nuget\\packages\\extended.wpf.toolkit/2.8.0\\lib/net40/Xceed.Wpf.AvalonDock.Themes.VS2010.dll",
+        "C:\\Users\\victor.rodriguez\\.nuget\\packages\\extended.wpf.toolkit/2.8.0\\lib/net40/Xceed.Wpf.AvalonDock.dll",
         "C:\\Users\\victor.rodriguez\\.nuget\\packages\\extended.wpf.toolkit/2.8.0\\lib/net40/Xceed.Wpf.DataGrid.dll",
         "C:\\Users\\victor.rodriguez\\.nuget\\packages\\extended.wpf.toolkit/2.8.0\\lib/net40/Xceed.Wpf.Toolkit.dll",
         "C:\\Users\\victor.rodriguez\\.nuget\\packages\\humanizer.core/2.4.2\\lib/netstandard2.0/Humanizer.dll",
@@ -106,13 +106,28 @@
         "C:\\Users\\victor.rodriguez\\.nuget\\packages\\uipath.uiautomation.activities/20.4.1\\lib/net461/UiPath.Wizards.dll",
         "C:\\Users\\victor.rodriguez\\.nuget\\packages\\uipath.vision/2.0.3\\lib/net461/UiPath.Vision.AzureComputerVision.dll",
         "C:\\Users\\victor.rodriguez\\.nuget\\packages\\uipath.vision/2.0.3\\lib/net461/UiPath.Vision.Core.dll",
-        "C:\\Users\\victor.rodriguez\\.nuget\\packages\\uipath.vision/2.0.3\\lib/net461/UiPath.Vision.dll",
         "C:\\Users\\victor.rodriguez\\.nuget\\packages\\uipath.vision/2.0.3\\lib/net461/UiPath.Vision.GoogleCloud.dll",
         "C:\\Users\\victor.rodriguez\\.nuget\\packages\\uipath.vision/2.0.3\\lib/net461/UiPath.Vision.Microsoft.dll",
         "C:\\Users\\victor.rodriguez\\.nuget\\packages\\uipath.vision/2.0.3\\lib/net461/UiPath.Vision.MicrosoftCloud.dll",
-        "C:\\Users\\victor.rodriguez\\.nuget\\packages\\uipath.vision/2.0.3\\lib/net461/UiPath.Vision.Tesseract.dll"
+        "C:\\Users\\victor.rodriguez\\.nuget\\packages\\uipath.vision/2.0.3\\lib/net461/UiPath.Vision.Tesseract.dll",
+        "C:\\Users\\victor.rodriguez\\.nuget\\packages\\uipath.vision/2.0.3\\lib/net461/UiPath.Vision.dll"
       ],
       "Path": "C:\\Users\\victor.rodriguez\\.nuget\\packages\\uipath.uiautomation.activities\\20.4.1"
+    },
+    {
+      "Package": {
+        "Id": "UiPath.PDF.Activities",
+        "Version": "3.2.2"
+      },
+      "Assemblies": [
+        "C:\\Users\\victor.rodriguez\\.nuget\\packages\\bitmiracle.docotic.pdf/5.10.9957\\lib/net40/BitMiracle.Docotic.Pdf.dll",
+        "C:\\Users\\victor.rodriguez\\.nuget\\packages\\system.valuetuple/4.5.0\\lib/net461/System.ValueTuple.dll",
+        "C:\\Users\\victor.rodriguez\\.nuget\\packages\\uipath.ocr.contracts/2.6.0\\lib/net461/UiPath.OCR.Contracts.dll",
+        "C:\\Users\\victor.rodriguez\\.nuget\\packages\\uipath.pdf.activities/3.2.2\\lib/net461/UiPath.PDF.Activities.Design.dll",
+        "C:\\Users\\victor.rodriguez\\.nuget\\packages\\uipath.pdf.activities/3.2.2\\lib/net461/UiPath.PDF.Activities.dll",
+        "C:\\Users\\victor.rodriguez\\.nuget\\packages\\uipath.pdf.activities/3.2.2\\lib/net461/UiPath.PDF.dll"
+      ],
+      "Path": "C:\\Users\\victor.rodriguez\\.nuget\\packages\\uipath.pdf.activities\\3.2.2"
     }
   ],
   "Conflicts": [],
@@ -120,6 +135,11 @@
     "AvalonEdit": {
       "Id": "AvalonEdit",
       "Version": "5.0.3",
+      "Dependencies": []
+    },
+    "BitMiracle.Docotic.Pdf": {
+      "Id": "BitMiracle.Docotic.Pdf",
+      "Version": "5.10.9957",
       "Dependencies": []
     },
     "BouncyCastle": {
@@ -289,6 +309,24 @@
       "Version": "2.6.0",
       "Dependencies": []
     },
+    "UiPath.PDF.Activities": {
+      "Id": "UiPath.PDF.Activities",
+      "Version": "3.2.2",
+      "Dependencies": [
+        {
+          "Item1": "UiPath.OCR.Contracts",
+          "Item2": "[2.6.0, )"
+        },
+        {
+          "Item1": "System.ValueTuple",
+          "Item2": "[4.5.0, )"
+        },
+        {
+          "Item1": "BitMiracle.Docotic.Pdf",
+          "Item2": "[5.10.9957, )"
+        }
+      ]
+    },
     "UiPath.Platform": {
       "Id": "UiPath.Platform",
       "Version": "20.4.0",
@@ -417,6 +455,16 @@
     },
     {
       "Package": {
+        "Id": "BitMiracle.Docotic.Pdf",
+        "Version": "5.10.9957"
+      },
+      "Assemblies": [
+        "C:\\Users\\victor.rodriguez\\.nuget\\packages\\bitmiracle.docotic.pdf\\5.10.9957\\lib\\net40\\BitMiracle.Docotic.Pdf.dll"
+      ],
+      "Path": "C:\\Users\\victor.rodriguez\\.nuget\\packages\\bitmiracle.docotic.pdf\\5.10.9957"
+    },
+    {
+      "Package": {
         "Id": "BouncyCastle",
         "Version": "1.8.5"
       },
@@ -461,10 +509,10 @@
         "Version": "2.8.0"
       },
       "Assemblies": [
-        "C:\\Users\\victor.rodriguez\\.nuget\\packages\\extended.wpf.toolkit\\2.8.0\\lib\\net40\\Xceed.Wpf.AvalonDock.dll",
         "C:\\Users\\victor.rodriguez\\.nuget\\packages\\extended.wpf.toolkit\\2.8.0\\lib\\net40\\Xceed.Wpf.AvalonDock.Themes.Aero.dll",
         "C:\\Users\\victor.rodriguez\\.nuget\\packages\\extended.wpf.toolkit\\2.8.0\\lib\\net40\\Xceed.Wpf.AvalonDock.Themes.Metro.dll",
         "C:\\Users\\victor.rodriguez\\.nuget\\packages\\extended.wpf.toolkit\\2.8.0\\lib\\net40\\Xceed.Wpf.AvalonDock.Themes.VS2010.dll",
+        "C:\\Users\\victor.rodriguez\\.nuget\\packages\\extended.wpf.toolkit\\2.8.0\\lib\\net40\\Xceed.Wpf.AvalonDock.dll",
         "C:\\Users\\victor.rodriguez\\.nuget\\packages\\extended.wpf.toolkit\\2.8.0\\lib\\net40\\Xceed.Wpf.DataGrid.dll",
         "C:\\Users\\victor.rodriguez\\.nuget\\packages\\extended.wpf.toolkit\\2.8.0\\lib\\net40\\Xceed.Wpf.Toolkit.dll"
       ],
@@ -547,10 +595,10 @@
         "Version": "2.4.1"
       },
       "Assemblies": [
-        "C:\\Users\\victor.rodriguez\\.nuget\\packages\\npoi\\2.4.1\\lib\\net45\\NPOI.dll",
         "C:\\Users\\victor.rodriguez\\.nuget\\packages\\npoi\\2.4.1\\lib\\net45\\NPOI.OOXML.dll",
         "C:\\Users\\victor.rodriguez\\.nuget\\packages\\npoi\\2.4.1\\lib\\net45\\NPOI.OpenXml4Net.dll",
-        "C:\\Users\\victor.rodriguez\\.nuget\\packages\\npoi\\2.4.1\\lib\\net45\\NPOI.OpenXmlFormats.dll"
+        "C:\\Users\\victor.rodriguez\\.nuget\\packages\\npoi\\2.4.1\\lib\\net45\\NPOI.OpenXmlFormats.dll",
+        "C:\\Users\\victor.rodriguez\\.nuget\\packages\\npoi\\2.4.1\\lib\\net45\\NPOI.dll"
       ],
       "Path": "C:\\Users\\victor.rodriguez\\.nuget\\packages\\npoi\\2.4.1"
     },
@@ -639,6 +687,18 @@
         "C:\\Users\\victor.rodriguez\\.nuget\\packages\\uipath.ocr.contracts\\2.6.0\\lib\\net461\\UiPath.OCR.Contracts.dll"
       ],
       "Path": "C:\\Users\\victor.rodriguez\\.nuget\\packages\\uipath.ocr.contracts\\2.6.0"
+    },
+    {
+      "Package": {
+        "Id": "UiPath.PDF.Activities",
+        "Version": "3.2.2"
+      },
+      "Assemblies": [
+        "C:\\Users\\victor.rodriguez\\.nuget\\packages\\uipath.pdf.activities\\3.2.2\\lib\\net461\\UiPath.PDF.Activities.Design.dll",
+        "C:\\Users\\victor.rodriguez\\.nuget\\packages\\uipath.pdf.activities\\3.2.2\\lib\\net461\\UiPath.PDF.Activities.dll",
+        "C:\\Users\\victor.rodriguez\\.nuget\\packages\\uipath.pdf.activities\\3.2.2\\lib\\net461\\UiPath.PDF.dll"
+      ],
+      "Path": "C:\\Users\\victor.rodriguez\\.nuget\\packages\\uipath.pdf.activities\\3.2.2"
     },
     {
       "Package": {
