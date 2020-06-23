@@ -1,0 +1,10 @@
+Fuente: httpssupport.google.commailanswer7126229hl=es
+
+Servidor SMTP Gmail
+smtp.gmail.com  465
+
+Servidor IMAP Gmail
+imap.gmail.com  993
+
+Propiedades de headers
+httpsdocs.microsoft.comen-usdotnetapisystem.net.mail.mailmessageredirectedfrom=MSDN&view=netframework-4.8
