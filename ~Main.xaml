@@ -43,18 +43,9 @@
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <sap:WorkflowViewStateService.ViewState>
-    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
-      <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
-    </scg:Dictionary>
-  </sap:WorkflowViewStateService.ViewState>
   <Flowchart DisplayName="PrimerEjercicioOut" sap:VirtualizedContainerService.HintSize="662.666666666667,835.333333333333" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:String" Name="VariableTexto" />
-      <Variable x:TypeArguments="x:String" Default="Unileverdigitalsquad" Name="contrasena" />
-      <Variable x:TypeArguments="x:String" Default="digitalsquad.proyectos@gmail.com" Name="correo" />
-      <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="UnseenMess" />
     </Flowchart.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -67,7 +58,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID5</x:Reference>
+      <x:Reference>__ReferenceID4</x:Reference>
     </Flowchart.StartNode>
     <FlowStep>
       <sap:WorkflowViewStateService.ViewState>
@@ -246,97 +237,23 @@
     <x:Reference>__ReferenceID1</x:Reference>
     <x:Reference>__ReferenceID2</x:Reference>
     <x:Reference>__ReferenceID3</x:Reference>
-    <FlowStep x:Name="__ReferenceID5">
+    <FlowStep x:Name="__ReferenceID4">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">270,127.333333333333</av:Point>
           <av:Size x:Key="ShapeSize">200,69.3333333333333</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">370,196.666666666667 370,255.333333333333</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="SendMail" sap:VirtualizedContainerService.HintSize="200,69.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_7">
+      <Sequence sap:VirtualizedContainerService.HintSize="200,84.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_7">
+        <Sequence.Variables>
+          <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="totalCorreos" />
+        </Sequence.Variables>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" TimeoutMS="{x:Null}" Body="Esto es una prubea del poder que tiene un RPA" DisplayName="Send SMTP Mail Message" Email="[correo]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="412.666666666667,149.333333333333" sap2010:WorkflowViewState.IdRef="SendMail_1" IsBodyHtml="False" Password="[contrasena]" Port="465" SecureConnection="Auto" Server="smtp.gmail.com" Subject="PruebaRPA" To="[correo]">
-          <ui:SendMail.Files>
-            <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
-          </ui:SendMail.Files>
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-              <x:Boolean x:Key="IsPinned">False</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-        </ui:SendMail>
-        <ui:GetIMAPMailMessages TimeoutMS="{x:Null}" DeleteMessages="False" DisplayName="Get IMAP Mail Messages" Email="[correo]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="412.666666666667,22" sap2010:WorkflowViewState.IdRef="GetIMAPMailMessages_3" MailFolder="Inbox" MarkAsRead="True" Messages="[UnseenMess]" OnlyUnreadMessages="True" Password="[contrasena]" Port="993" SecureConnection="Auto" Server="imap.gmail.com" Top="30" />
-        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="412.666666666667,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[UnseenMess.Count.ToString]" />
-        <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="412.666666666667,514.666666666667" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[UnseenMess]">
-          <ui:ForEach.Body>
-            <ActivityAction x:TypeArguments="snm:MailMessage">
-              <ActivityAction.Argument>
-                <DelegateInArgument x:TypeArguments="snm:MailMessage" Name="mail" />
-              </ActivityAction.Argument>
-              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,376" sap2010:WorkflowViewState.IdRef="Sequence_10">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[mail.Subject + Environment.NewLine + mail.Body + Environment.NewLine + mail.Headers(&quot;date&quot;)]" />
-                <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" Name="{x:Null}" TimeoutMS="{x:Null}" Body="Respuesta de prueba y automática" DisplayName="Send SMTP Mail Message" Email="[correo]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="334,149.333333333333" sap2010:WorkflowViewState.IdRef="SendMail_2" IsBodyHtml="False" MailMessage="[mail]" Password="[contrasena]" Port="465" SecureConnection="Auto" Server="smtp.gmail.com" Subject="RE:PRUEBA" To="[correo]">
-                  <ui:SendMail.Files>
-                    <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
-                  </ui:SendMail.Files>
-                </ui:SendMail>
-              </Sequence>
-            </ActivityAction>
-          </ui:ForEach.Body>
-        </ui:ForEach>
       </Sequence>
-      <FlowStep.Next>
-        <FlowStep x:Name="__ReferenceID4">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:Point x:Key="ShapeLocation">270,255.333333333333</av:Point>
-              <av:Size x:Key="ShapeSize">200,69.3333333333333</av:Size>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="mailwithOUTLOOK" sap:VirtualizedContainerService.HintSize="454.666666666667,668.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_9">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" TimeoutMS="{x:Null}" Body="Esto es una prueba para ver si se puede &#xA;o no eniar mensajes" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="412.666666666667,149.333333333333" sap2010:WorkflowViewState.IdRef="SendOutlookMail_1" IsBodyHtml="False" IsDraft="False" Subject="Prueba desde RPA" To="victor.rodriguez@unilever.com">
-              <ui:SendOutlookMail.Files>
-                <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
-              </ui:SendOutlookMail.Files>
-            </ui:SendOutlookMail>
-            <ui:GetOutlookMailMessages Account="{x:Null}" Filter="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Get Outlook Mail Messages" GetAttachements="False" sap:VirtualizedContainerService.HintSize="412.666666666667,22" sap2010:WorkflowViewState.IdRef="GetOutlookMailMessages_1" MailFolder="Bandeja de entrada" MarkAsRead="False" Messages="[totalCorreos]" OnlyUnreadMessages="True" Top="30" />
-            <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="412.666666666667,325.333333333333" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[totalCorreos]">
-              <ui:ForEach.Body>
-                <ActivityAction x:TypeArguments="snm:MailMessage">
-                  <ActivityAction.Argument>
-                    <DelegateInArgument x:TypeArguments="snm:MailMessage" Name="item" />
-                  </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,186.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_11">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[item.Subject]" />
-                  </Sequence>
-                </ActivityAction>
-              </ui:ForEach.Body>
-            </ui:ForEach>
-          </Sequence>
-        </FlowStep>
-      </FlowStep.Next>
     </FlowStep>
-    <x:Reference>__ReferenceID4</x:Reference>
   </Flowchart>
 </Activity>
